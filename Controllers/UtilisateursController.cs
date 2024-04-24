@@ -12,7 +12,7 @@ namespace ProjetEpîcerie.Controllers
 {
     public class UtilisateursController : Controller
     {
-        private LoloEpicerieDb db = new LoloEpicerieDb();
+        private MamibepicerieDb db = new MamibepicerieDb();
 
         // GET: Utilisateurs
         public ActionResult Index()
@@ -114,8 +114,11 @@ namespace ProjetEpîcerie.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
+            Login Login = db.Logins.Find(id);
+            db.Logins.Remove(Login);
             Utilisateur utilisateur = db.Utilisateur.Find(id);
             db.Utilisateur.Remove(utilisateur);
+
             db.SaveChanges();
             return RedirectToAction("Index");
         }

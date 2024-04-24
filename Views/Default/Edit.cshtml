@@ -1,6 +1,6 @@
 ﻿@model ProjetEpîcerie.Models.Panier
 
-<link href="~/Css/Acceuil.css" rel="stylesheet" />
+<link href="~/Css/Acc.css" rel="stylesheet" />
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
@@ -16,9 +16,9 @@
             <div class="container-fluid">
 
                 <a href="#">
-                    <img src="http://localhost:55503/image/Epicerie.png" alt="logo" style="width: 100px; height: auto;">
+                    <img src="http://localhost:55503/Images/Epicerie.JPG" alt="logo" style="width: 100px; height: auto;">
                 </a>
-                <span id="txtLogo" style="font-size:21px">  TEC-EPIC </span>
+                <span id="txtLogo" style="font-size:21px">  MAMIBE </span>
                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
                     <ul class="navbar-nav">
                         @if (ViewBag.Categories != null)
@@ -39,7 +39,7 @@
 
                     <ul class="navbar-nav">
                         <li>
-                            <a href="@Url.Action("Panier", "Default")" class="btn btn-info">
+                            <a href="@Url.Action("Panier", "Default")" class="btn btn-warning">
                                 <i class="bi bi-cart4"></i>
                                 <span>
                                     @if (ViewBag.nbPanier != null)

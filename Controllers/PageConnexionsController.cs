@@ -12,7 +12,7 @@ namespace ProjetEpîcerie.Controllers
 {
     public class PageConnexionsController : Controller
     {
-        private LoloEpicerieDb db = new LoloEpicerieDb();
+        private MamibepicerieDb db = new MamibepicerieDb();
 
         // GET: PageConnexions
         public ActionResult Index()

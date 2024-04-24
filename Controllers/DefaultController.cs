@@ -16,7 +16,7 @@ namespace ProjetEpîcerie.Controllers
 {
     public class DefaultController : Controller
     {
-        private LoloEpicerieDb Db = new LoloEpicerieDb();   
+        private MamibepicerieDb Db = new MamibepicerieDb();   
         // GET: Default
 
         public ActionResult Index()
@@ -59,7 +59,7 @@ namespace ProjetEpîcerie.Controllers
         private bool SendMail(Inscription InscriptionInfo)
         {
 
-            string suject = "Bienvenue à l'Épicerie TEC-EPIC";
+            string suject = "Bienvenue à l'Épicerie MAMIBE";
             string Message = $"Voici vos informations de connexion:\nNom : {InscriptionInfo.username}\nMot de passe : {InscriptionInfo.password}\nCordialement.";
 
             string sender = System.Configuration.ConfigurationManager.AppSettings["mailSender"];
